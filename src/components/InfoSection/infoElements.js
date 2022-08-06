@@ -1,5 +1,13 @@
 import styled from "styled-components";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import {
+  DiHtml5,
+  DiCss3,
+  DiJsBadge,
+  DiReact,
+  DiPhotoshop,
+  DiIllustrator,
+} from "react-icons/di";
 
 export const InfoContainer = styled.div`
   color: #fff;
@@ -112,3 +120,33 @@ export const ArrowDown = styled(MdKeyboardArrowDown)`
     transition: all 1s ease-in-out;
   }
 `;
+
+// export const Html5 = styled(DiHtml5)`
+//   color: #fff;
+//   font-size: 26px;
+// `;
+
+// export const Javascript = styled(DiJsBadge)`
+//   color: #fff;
+//   font-size: 26px;
+// `;
+
+// export const CSS3 = styled(DiCss3)`
+//   color: #fff;
+//   font-size: 26px;
+// `;
+
+// export const ReactIcon = styled(DiReact)`
+//   color: #fff;
+//   font-size: 26px;
+// `;
+
+// export const Photoshop = styled(DiPhotoshop)`
+//   color: #fff;
+//   font-size: 26px;
+// `;
+
+// export const Illustrator = styled(DiIllustrator)`
+//   color: #fff;
+//   font-size: 26px;
+// `;
