@@ -90,6 +90,8 @@ export const Subtitle = styled.p`
   color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
 `;
 
+export const Icons = styled.div``;
+
 export const BtnWrap = styled.div`
   margin-top: 32px;
   display: flex;
@@ -121,32 +123,32 @@ export const ArrowDown = styled(MdKeyboardArrowDown)`
   }
 `;
 
-// export const Html5 = styled(DiHtml5)`
-//   color: #fff;
-//   font-size: 26px;
-// `;
+export const Html5 = styled(DiHtml5)`
+  color: #fff;
+  font-size: 26px;
+`;
 
-// export const Javascript = styled(DiJsBadge)`
-//   color: #fff;
-//   font-size: 26px;
-// `;
+export const Javascript = styled(DiJsBadge)`
+  color: #fff;
+  font-size: 26px;
+`;
 
-// export const CSS3 = styled(DiCss3)`
-//   color: #fff;
-//   font-size: 26px;
-// `;
+export const CSS3 = styled(DiCss3)`
+  color: #fff;
+  font-size: 26px;
+`;
 
-// export const ReactIcon = styled(DiReact)`
-//   color: #fff;
-//   font-size: 26px;
-// `;
+export const ReactIcon = styled(DiReact)`
+  color: #fff;
+  font-size: 26px;
+`;
 
-// export const Photoshop = styled(DiPhotoshop)`
-//   color: #fff;
-//   font-size: 26px;
-// `;
+export const Photoshop = styled(DiPhotoshop)`
+  color: #fff;
+  font-size: 26px;
+`;
 
-// export const Illustrator = styled(DiIllustrator)`
-//   color: #fff;
-//   font-size: 26px;
-// `;
+export const Illustrator = styled(DiIllustrator)`
+  color: #fff;
+  font-size: 26px;
+`;

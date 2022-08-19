@@ -1,4 +1,5 @@
 import React from "react";
+import { DiAndroid } from "react-icons/di";
 
 import { Button } from "../ButtonElement";
 import { ArrowDown } from "../HeroSection/HeroElements";
@@ -14,6 +15,9 @@ import {
   Subtitle,
   ImgWrap,
   Img,
+  Icons,
+  CSS3,
+  Html5,
 } from "./infoElements";
 const InfoSection = ({
   lightBg,
@@ -29,6 +33,7 @@ const InfoSection = ({
   primary,
   dark,
   dark2,
+  showIcons,
 }) => {
   return (
     <>
@@ -40,6 +45,7 @@ const InfoSection = ({
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headLine}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
+                <Icons>{showIcons ? <CSS3 /> : 0}</Icons>
               </TextWrapper>
             </Column1>
             <Column2>
