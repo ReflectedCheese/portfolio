@@ -1,7 +1,5 @@
-import React from "react";
-import Icon1 from "../../images/svg-4.svg";
-import Icon2 from "../../images/svg-5.svg";
-import Icon3 from "../../images/svg-6.svg";
+import React, { useEffect, useState } from "react";
+import BarLoader from "react-spinners/BarLoader";
 import { ArrowDown } from "../HeroSection/HeroElements";
 import { Button } from "../ButtonElement";
 import {
@@ -14,45 +12,67 @@ import {
   ServicesP,
 } from "./ServicesElements";
 
-const Services = () => {
-  return (
-    <ServicesContainer id="work">
-      <ServicesH1>Some of my Work</ServicesH1>
-      <ServicesWrapper>
-        <ServicesCard>
-          <ServicesIcon src={Icon1} />
-          <ServicesH2>WhatThePlant</ServicesH2>
-          <ServicesP>
-            We help reduce your fees and increase your overall revenue.
-          </ServicesP>
-        </ServicesCard>
-        <ServicesCard>
-          <ServicesIcon src={Icon2} />
-          <ServicesH2>Virtual Offices</ServicesH2>
-          <ServicesP>
-            You can access our platform online anywhere in the world.
-          </ServicesP>
-        </ServicesCard>
-        <ServicesCard>
-          <ServicesIcon src={Icon3} />
-          <ServicesH2>Premium Benefits</ServicesH2>
-          <ServicesP>
-            Unlock our special membership card that returns 5% cash back.
-          </ServicesP>
-        </ServicesCard>
-        <Button
-          to="contact"
-          smooth={true}
-          duration={500}
-          spy={true}
-          exact="true"
-          offset={-80}
-        >
-          <ArrowDown />
-        </Button>
-      </ServicesWrapper>
-    </ServicesContainer>
-  );
+const PortFolio = () => {
+  const apiUrl = "https://estuera.com/portfolio_api/projects";
+
+  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then(
+        (result) => {
+          console.log(result);
+          setLoading(false);
+          setProjects(result);
+        },
+        (error) => {
+          setLoading(true);
+          console.log(error);
+        }
+      );
+  }, []);
+
+  if (loading) {
+    return (
+      <ServicesContainer id="work">
+        <ServicesH1>Some of my Work</ServicesH1>
+        <BarLoader
+          color={"#9900FF"}
+          loading={true}
+          cssOverride={true}
+          size={100}
+        />
+      </ServicesContainer>
+    );
+  } else {
+    return (
+      <ServicesContainer id="work">
+        <ServicesH1>Some of my Work</ServicesH1>
+        <ServicesWrapper>
+          {projects.map((project) => (
+            <ServicesCard>
+              <ServicesIcon src={project.image_url} />
+              <ServicesH2>{project.title}</ServicesH2>
+              <ServicesP>{project.description}</ServicesP>
+            </ServicesCard>
+          ))}
+
+          <Button
+            to="contact"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            <ArrowDown />
+          </Button>
+        </ServicesWrapper>
+      </ServicesContainer>
+    );
+  }
 };
 
-export default Services;
+export default PortFolio;
