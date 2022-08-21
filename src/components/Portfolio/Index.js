@@ -2,15 +2,16 @@ import React, { useEffect, useState } from "react";
 import BarLoader from "react-spinners/BarLoader";
 import { ArrowDown } from "../HeroSection/HeroElements";
 import { Button } from "../ButtonElement";
+import { HeroBtnWrapper } from "../HeroSection/HeroElements";
 import {
-  ServicesContainer,
-  ServicesH1,
-  ServicesWrapper,
-  ServicesCard,
-  ServicesIcon,
-  ServicesH2,
-  ServicesP,
-} from "./ServicesElements";
+  PortfolioContainer,
+  PortfolioH1,
+  PortfolioWrapper,
+  PortfolioCard,
+  PortfolioIcon,
+  PortfolioH2,
+  PortfolioP,
+} from "./PortfolioElements";
 
 const PortFolio = () => {
   const apiUrl = "https://estuera.com/portfolio_api/projects";
@@ -36,29 +37,30 @@ const PortFolio = () => {
 
   if (loading) {
     return (
-      <ServicesContainer id="work">
-        <ServicesH1>Some of my Work</ServicesH1>
+      <PortfolioContainer id="work">
+        <PortfolioH1>Some of my Work</PortfolioH1>
         <BarLoader
           color={"#9900FF"}
           loading={true}
           cssOverride={true}
           size={100}
         />
-      </ServicesContainer>
+      </PortfolioContainer>
     );
   } else {
     return (
-      <ServicesContainer id="work">
-        <ServicesH1>Some of my Work</ServicesH1>
-        <ServicesWrapper>
+      <PortfolioContainer id="work">
+        <PortfolioH1>Some of my Work</PortfolioH1>
+        <PortfolioWrapper>
           {projects.map((project) => (
-            <ServicesCard>
-              <ServicesIcon src={project.image_url} />
-              <ServicesH2>{project.title}</ServicesH2>
-              <ServicesP>{project.description}</ServicesP>
-            </ServicesCard>
+            <PortfolioCard>
+              <PortfolioIcon src={project.image_url} />
+              <PortfolioH2>{project.title}</PortfolioH2>
+              <PortfolioP>{project.description}</PortfolioP>
+            </PortfolioCard>
           ))}
-
+        </PortfolioWrapper>
+        <HeroBtnWrapper>
           <Button
             to="contact"
             smooth={true}
@@ -69,8 +71,8 @@ const PortFolio = () => {
           >
             <ArrowDown />
           </Button>
-        </ServicesWrapper>
-      </ServicesContainer>
+        </HeroBtnWrapper>
+      </PortfolioContainer>
     );
   }
 };

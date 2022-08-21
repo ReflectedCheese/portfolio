@@ -12,15 +12,24 @@ import {
 export const InfoContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#070621")};
+  padding-bottom: 100px;
 
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
+  @media screen and (max-width: 1000px) {
+    padding-bottom: 300px;
+  }
+
+  @media screen and (max-width: 764px) {
+    padding-bottom: 600px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-bottom: 400px;
   }
 `;
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: 400px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;

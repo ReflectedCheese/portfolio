@@ -25,10 +25,10 @@ const HeroSection = () => {
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </HeroBg>
       <HeroContent>
-        <HeroP>Looking for a</HeroP>
+        <HeroP>I'm a</HeroP>
         <HeroH1>
           DESIGN FOCUSED <br />
-          DEVELOPER?
+          DEVELOPER
         </HeroH1>
 
         <HeroBtnWrapper>
@@ -44,9 +44,7 @@ const HeroSection = () => {
             exact="true"
             offset={-80}
           >
-            {" "}
             <ArrowDown />
-            {/* {hover ? <ArrowDown /> : <ArrowRight />} */}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>

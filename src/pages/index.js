@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import InfoSection from "../components/InfoSection";
-import { homeObjOne, homeObjTwo } from "../components/InfoSection/Data";
+import { aboutContent, contactContent } from "../components/InfoSection/Data";
 import Navbar from "../components/Navbar";
-import Services from "../components/Services/Index";
+import PortFolio from "../components/Portfolio/Index";
 import Sidebar from "../components/Sidebar";
 
 const Home = () => {
@@ -19,9 +19,9 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
-      <InfoSection {...homeObjOne} />
-      <Services />
-      <InfoSection {...homeObjTwo} />
+      <InfoSection {...aboutContent} />
+      <PortFolio />
+      <InfoSection {...contactContent} />
       <Footer />
     </>
   );

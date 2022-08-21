@@ -1,4 +1,4 @@
-export const homeObjOne = {
+export const aboutContent = {
   id: "about",
   lightBg: false,
   lightText: true,
@@ -6,28 +6,30 @@ export const homeObjOne = {
   topLine: "About Me",
   headLine: "Hi! I'm Simone Willemse",
   description:
-    "I'm a junior design focused front-end developer based in Belgium with an graphic designs & communications background. So it's not just front-end web applications but also brand identity, graphics and illustrations.",
+    "I'm a junior design focused front-end developer based in Belgium with a graphic designs & communications background. So it's not just front-end web applications but also brand identity, graphics and illustrations.",
   imgStart: false,
   img: require("../../images/test.png"),
-  alt: "Car",
+  alt: "about",
   dark: true,
   primary: true,
   darkText: false,
   showIcons: true,
+  showButton: true,
+  buttonLink: "work",
 };
 
-export const homeObjTwo = {
+export const contactContent = {
   id: "contact",
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
   topLine: "Contact Me",
   headLine: "Interested in working together?",
-  description:
-    "Hamont-Achel, Belgium simywillemse@gmail.com +32 483 62 42 67, or click on any of my social icons in the footer.",
-  imgStart: false,
+  description: "Click on any of my social icons in the footer.",
+  img: require("../../images/work.svg").default,
+  imgStart: true,
   dark: true,
   primary: false,
   darkText: true,
-  Button: false,
+  showButton: false,
 };

@@ -10,7 +10,13 @@ import {
   SocialIcons,
   SocialIconLink,
 } from "./FooterElements";
-import { FaInstagram, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const Footer = () => {
   const toggleHome = () => {
@@ -29,6 +35,12 @@ const Footer = () => {
               Simone Willemse © {new Date().getFullYear()} All rights reserved.
             </WebsiteRights>
             <SocialIcons>
+              <SocialIconLink
+                href="mailto:simywillemse+work@gmail.com"
+                aria-label="Email"
+              >
+                <FaEnvelope />
+              </SocialIconLink>
               <SocialIconLink
                 href="https://www.instagram.com/simywillemse/"
                 target="_blank"
