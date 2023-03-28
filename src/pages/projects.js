@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
-import InfoSection from "../components/InfoSection";
-import {contactContent} from "../components/InfoSection/Data";
+// import InfoSection from "../components/InfoSection";
+// import { aboutContent, contactContent } from "../components/InfoSection/Data";
 import Navbar from "../components/Navbar";
 import PortFolio from "../components/Portfolio/Index";
 import Sidebar from "../components/Sidebar";
 
-const Home = () => {
+const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -18,12 +18,11 @@ const Home = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-        <HeroSection />
-        <PortFolio />
-        <InfoSection {...contactContent} />
+      <HeroSection />
+      <PortFolio />
       <Footer />
     </>
   );
 };
 
-export default Home;
+export default Projects;

@@ -10,7 +10,7 @@ import {
   HeroH1,
   HeroP,
   HeroBtnWrapper,
-  ArrowDown,
+
 } from "./HeroElements";
 
 const HeroSection = () => {
@@ -25,15 +25,17 @@ const HeroSection = () => {
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </HeroBg>
       <HeroContent>
-        <HeroP>I'm a</HeroP>
-        <HeroH1>
-          DESIGN FOCUSED <br />
-          DEVELOPER
-        </HeroH1>
+        <HeroH1>Welcome.</HeroH1>
+        <HeroP>
+          My name is Simone Willemse, I'm a junior design focused front-end
+          developer based in Belgium with a graphic designs & communications
+          background. So it's not just front-end web applications but also brand
+          identity, graphics and illustrations.
+        </HeroP>
 
         <HeroBtnWrapper>
           <Button
-            to="about"
+            to="home"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
@@ -44,7 +46,7 @@ const HeroSection = () => {
             exact="true"
             offset={-80}
           >
-            <ArrowDown />
+
           </Button>
         </HeroBtnWrapper>
       </HeroContent>

@@ -4,8 +4,8 @@ import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
   background: ${({ scrollNav }) => (scrollNav ? "#070621" : "transparent")};
-  height: 80px;
-  margin-top: -80px;
+  height: 110px;
+  margin-top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,22 +22,39 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 40px;
   z-index: 1;
   width: 100%;
   padding: 0 24px;
-  max-width: 1100px;
+  max-width: 1400px;
 `;
+
+export const Logo = styled.div`
+/* margin-top: 30px; */
+
+`
 export const NavLogo = styled(LinkR)`
   color: #fff;
+  opacity: 80%;
   justify-self: flex-start;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 3rem;
   display: flex;
   align-items: center;
-  margin-left: 24px;
-  font-weight: bold;
+  margin-left: 4px;
+  font-weight: lighter;
   text-decoration: none;
+`;
+export const NavSub = styled.div`
+  color: #fff;
+  opacity: 80%;
+  justify-self: flex-start;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+  font-weight: lighter;
+  text-decoration: none; ;
 `;
 
 export const MobileIcon = styled.div`

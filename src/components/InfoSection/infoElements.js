@@ -57,12 +57,6 @@ export const Column1 = styled.div`
   grid-area: col1;
 `;
 
-export const Column2 = styled.div`
-  margin-bottom: 15px;
-  padding: 0 15px;
-  grid-area: col2;
-`;
-
 export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
@@ -82,7 +76,7 @@ export const TopLine = styled.p`
 export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 48px;
-  line-height: 1.1;
+  line-height: 1;
   font-weight: lighter;
   color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
 
@@ -94,7 +88,7 @@ export const Heading = styled.h1`
 export const Subtitle = styled.p`
   max-width: 440px;
   margin-bottom: 35px;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 24px;
   color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
 `;

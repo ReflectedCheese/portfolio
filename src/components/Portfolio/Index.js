@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import BarLoader from "react-spinners/BarLoader";
-import { ArrowDown } from "../HeroSection/HeroElements";
 import { Button } from "../ButtonElement";
 import { HeroBtnWrapper } from "../HeroSection/HeroElements";
+import Video from "../../video/video-2.mp4";
 import {
   PortfolioContainer,
   PortfolioH1,
@@ -11,6 +11,8 @@ import {
   PortfolioIcon,
   PortfolioH2,
   PortfolioP,
+  HeroBg,
+  VideoBg
 } from "./PortfolioElements";
 
 const PortFolio = () => {
@@ -37,8 +39,11 @@ const PortFolio = () => {
 
   if (loading) {
     return (
-      <PortfolioContainer id="work">
-        <PortfolioH1>Some of my Work</PortfolioH1>
+      <PortfolioContainer id="projects">
+        <HeroBg>
+          <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+        </HeroBg>
+        <PortfolioH1>Projects</PortfolioH1>
         <BarLoader
           color={"#9900FF"}
           loading={true}
@@ -49,8 +54,8 @@ const PortFolio = () => {
     );
   } else {
     return (
-      <PortfolioContainer id="work">
-        <PortfolioH1>Some of my Work</PortfolioH1>
+      <PortfolioContainer id="projects">
+        <PortfolioH1>Projects</PortfolioH1>
         <PortfolioWrapper>
           {projects.map((project) => (
             <PortfolioCard>
@@ -69,7 +74,7 @@ const PortFolio = () => {
             exact="true"
             offset={-80}
           >
-            <ArrowDown />
+          
           </Button>
         </HeroBtnWrapper>
       </PortfolioContainer>

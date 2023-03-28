@@ -3,13 +3,11 @@ export const aboutContent = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
-  topLine: "About Me",
-  headLine: "Hi! I'm Simone Willemse",
+  
+  headLine: "Welcome.",
   description:
-    "I'm a junior design focused front-end developer based in Belgium with a graphic designs & communications background. So it's not just front-end web applications but also brand identity, graphics and illustrations.",
+    "My name is Simone Willemse, I'm a junior design focused front-end developer based in Belgium with a graphic designs & communications background. So it's not just front-end web applications but also brand identity, graphics and illustrations.",
   imgStart: false,
-  img: require("../../images/test.png"),
-  alt: "about",
   dark: true,
   primary: true,
   darkText: false,

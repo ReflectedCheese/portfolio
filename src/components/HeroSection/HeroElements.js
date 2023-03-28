@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { MdKeyboardArrowDown } from "react-icons/md";
 
 export const HeroContainer = styled.div`
   background: #0c0c0c;
@@ -40,6 +39,7 @@ export const HeroBg = styled.div`
 `;
 
 export const VideoBg = styled.video`
+  
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -54,14 +54,15 @@ export const HeroContent = styled.div`
   padding: 8px 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 `;
 
 export const HeroH1 = styled.h1`
   color: #fff;
+  opacity: 80%;
   font-size: 70px;
   font-weight: lighter;
-  text-align: center;
+  text-align: left;
 
   @media screen and (max-width: 768px) {
     font-size: 50px;
@@ -74,9 +75,10 @@ export const HeroH1 = styled.h1`
 
 export const HeroP = styled.p`
   margin-top: 24px;
+  opacity: 80%;
   color: #fff;
-  font-size: 24px;
-  text-align: center;
+  font-size: 15px;
+  text-align: left;
   max-width: 600px;
 
   @media screen and (max-width: 768px) {
@@ -95,14 +97,3 @@ export const HeroBtnWrapper = styled.div`
   align-items: center;
 `;
 
-export const ArrowDown = styled(MdKeyboardArrowDown)`
-  margin-left: 8px;
-  font-size: 80px;
-  transform: translateY(20%);
-  transition: all 1s ease-in-out;
-
-  :hover {
-    transform: translateY(-20%);
-    transition: all 1s ease-in-out;
-  }
-`;

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
-import InfoSection from "../components/InfoSection";
-import {contactContent} from "../components/InfoSection/Data";
+import InfoSection from "../components/InfoSection/index";
 import Navbar from "../components/Navbar";
-import PortFolio from "../components/Portfolio/Index";
+
 import Sidebar from "../components/Sidebar";
 
-const Home = () => {
+const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -18,12 +17,11 @@ const Home = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-        <HeroSection />
-        <PortFolio />
-        <InfoSection {...contactContent} />
+      <HeroSection />
+      <InfoSection />
       <Footer />
     </>
   );
 };
 
-export default Home;
+export default Contact;

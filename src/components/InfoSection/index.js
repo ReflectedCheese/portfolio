@@ -2,20 +2,14 @@ import React from "react";
 import { HeroBtnWrapper } from "../HeroSection/HeroElements";
 
 import { Button } from "../ButtonElement";
-import { ArrowDown } from "../HeroSection/HeroElements";
 import {
   InfoContainer,
   InfoWrapper,
   InfoRow,
-  Column1,
-  Column2,
   TextWrapper,
   TopLine,
   Heading,
   Subtitle,
-  ImgWrap,
-  Img,
-  Icons,
 } from "./infoElements";
 const InfoSection = ({
   lightBg,
@@ -26,12 +20,9 @@ const InfoSection = ({
   headLine,
   darkText,
   description,
-  img,
-  alt,
   primary,
   dark,
   dark2,
-  showIcons,
   showButton,
   buttonLink,
 }) => {
@@ -50,7 +41,6 @@ const InfoSection = ({
         dark2={dark2 ? 1 : 0}
       >
         {" "}
-        <ArrowDown />
       </Button>
     );
   }
@@ -59,18 +49,11 @@ const InfoSection = ({
       <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
-            <Column1>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headLine}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
               </TextWrapper>
-            </Column1>
-            <Column2>
-              <ImgWrap>
-                <Img src={img} alt={alt} />
-              </ImgWrap>
-            </Column2>
           </InfoRow>
           <HeroBtnWrapper>{button}</HeroBtnWrapper>
         </InfoWrapper>

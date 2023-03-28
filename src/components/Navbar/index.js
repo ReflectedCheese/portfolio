@@ -6,10 +6,12 @@ import {
   Nav,
   NavbarContainer,
   NavLogo,
+  NavSub,
   MobileIcon,
   NavMenu,
   NavItem,
   NavLinks,
+  Logo,
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
@@ -32,27 +34,29 @@ const Navbar = ({ toggle }) => {
   };
 
   return (
-    <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            <NavLogo to="/" onClick={toggleHome}>
-              SIMONE WILLEMSE
-            </NavLogo>
+            <Logo>
+              <NavLogo to="/" onClick={toggleHome}>
+                Simone Willemse
+              </NavLogo>
+              <NavSub>Graphic Designer & Front-end Developer</NavSub>
+            </Logo>
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
             <NavMenu>
               <NavItem>
                 <NavLinks
-                  to="about"
+                  to="home"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  About
+                  Home
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -64,7 +68,7 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  Work
+                  Projects
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -95,7 +99,6 @@ const Navbar = ({ toggle }) => {
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
-    </>
   );
 };
 

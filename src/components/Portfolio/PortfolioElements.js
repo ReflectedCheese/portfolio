@@ -6,7 +6,6 @@ export const PortfolioContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #070621;
   margin-bottom: 50px;
   padding-bottom: 50px;
 
@@ -17,6 +16,25 @@ export const PortfolioContainer = styled.div`
   @media screen and (max-width: 480px) {
     height: 1300px;
   }
+`;
+
+export const HeroBg = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+`;
+
+export const VideoBg = styled.video`
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background: #232a34;
 `;
 
 export const PortfolioWrapper = styled.div`
@@ -39,7 +57,7 @@ export const PortfolioWrapper = styled.div`
 `;
 
 export const PortfolioCard = styled.div`
-  background: #fff;
+  
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
